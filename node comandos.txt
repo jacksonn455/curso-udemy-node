@@ -1,0 +1,26 @@
+-----Versão
+node -v (Mostra a versão instalada do node)
+npm -v (Mostra a versão instalada do npm)
+
+-----Instalação
+npm init - instala no projeto o package.json
+npm install express --save (framework de acesso web)
+
+----nodemon--
+npm install -g nodemon
+npm install --save-dev nodemon
+npm config get prefix
+set PATH=%PATH%;C:\Users\jackson.magnabosco\AppData\Roaming\npm;
+
+--------------------
+
+npm install mongoose --save (Framework para modelagem de banco de dados em node)
+npm install body-pareser --save (Requesição body)
+npm install bcrypt --save (Criptografar senhas do banco de dados)
+npm install jsonwetoken --save (serve para apenas pessoas autorizadas receber o json)
+npm install ejs --save ( é uma engine de visualização, com ele conseguimos de uma maneira fácil e simples transportar dados do back-end para o front-end)
+node app.js (inicia o servidor http://localhost:3000/)
+
+---- cmd
+node noticias.js (toda modificação tem que parar o cervidor e iniciar novamente)
+nodemon app ( fica rodando o servidor)
