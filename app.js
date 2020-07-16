@@ -1,20 +1,12 @@
+// Arquivo app.js guarda apenas elementos estruturais ou seja as regras
+
 var app = require('./config/server');
 
-app.get('/', function(req,res){
-    res.render('home/index');  // Pagina html criada com ejs
-});
+var rotaNoticias = require('./app/routes/noticias')(app);
 
-app.get('/formulario', function(req,res){
-    res.render("admin/form_add_noticia") ;
-});
+var rotaHome = require('./app/routes/home')(app);
 
-app.get('/noticias', function(req,res){
-    res.render('noticias/noticias');
-});
-
-app.get('/beleza', function(req,res){
-    res.render('<html><body> Noticias de Beleza </bodt></html>') // com express e sem ejs
-});
+var rotaFormulario = require('./app/routes/formulario')(app);
 
 // Recuperar msg utilizando (require)
 // ./ serve para dizer que esta no mesmo nivel da aplicação

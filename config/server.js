@@ -3,9 +3,11 @@
 // Serve para organizar as rotas
 var express = require('express');
 var app = express();
+// pesquisar as views
+app.set('views', './app/views');
 
 // npm install ejs --save
 app.set('view engine', 'ejs');
 
 // estruturado a ser um modulo para a aplicação
-module.exports = app;
+module.exports = app; 
