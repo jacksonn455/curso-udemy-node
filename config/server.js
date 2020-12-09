@@ -3,11 +3,14 @@
 // Serve para organizar as rotas
 // npm install consign@0.1.6 --save (carregamento automático de scripts(requires))
 var consign = require('consign');
-
+var bodyParser = require('body-parser');
 var express = require('express');
 var app = express();
 // pesquisar as views
 app.set('views', './app/views');
+
+// serve como midleware formato JSON
+app.use(bodyParser.urlencoded({extended: true}));
 
 // npm install ejs --save
 app.set('view engine', 'ejs');
